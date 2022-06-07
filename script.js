@@ -124,3 +124,13 @@ deleteButton.addEventListener('click', button => {
   calculator.delete()
   calculator.updateDisplay()
 })
+
+const audio = new Audio('1.mp3');
+
+const goClick = (e) => {
+  if (e.target.closest('[data-btn]')) {
+    audio.play();
+  }
+};
+
+document.addEventListener('click', goClick)
